@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar 10 20:13:36 2018
+
+@author: jofadamiro
+"""
+
+tickets = 15
+count = 0
+
+while tickets !=0:
+    print("There are currently", tickets, "tickets remaining.")
+   
+    userInput = int(input("How many tickets would you like to purchase?"))
+  
+    if userInput > 4:
+       print("You cannot purchase more than 4 tickets")
+   
+    elif tickets < userInput:
+       print("Available tickets are less than required")
+    else:
+       
+        count += 1
+      
+        tickets -= userInput
+        print("Transaction successful")
+    print()
+
+print("All the tickets are sold")
+print("The total number of buyers was ", count)
